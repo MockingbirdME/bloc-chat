@@ -9,6 +9,10 @@
       .state('landing', {
         url: '/',
         templateUrl: '/templates/landing.html'
+      })
+      .state('test',{
+        url: '/test',
+        templateUrl: '/templates/test.html'
       });
   }
   angular
