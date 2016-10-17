@@ -8,14 +8,11 @@
     $stateProvider
       .state('landing', {
         url: '/',
+        controller: 'LandingCtrl as landing',
         templateUrl: '/templates/landing.html'
-      })
-      .state('test',{
-        url: '/test',
-        templateUrl: '/templates/test.html'
       });
   }
   angular
-    .module('blocChat', ['firebase', 'ui.router'])
+    .module('blocChat', ['firebase', 'ui.router', 'ui.bootstrap'])
     .config(config);
 })();

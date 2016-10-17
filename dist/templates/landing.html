@@ -1,1 +1,11 @@
 <h1>This is the Landing</h1>
+<h4>{{landing.testData}}</h4>
+<div class="button-row">
+  <button class="btn btn-primary" type="button" ng-click="landing.open('sm')">Create room</button>
+</div>
+<table class="rooms-list-view">
+  <tr class="room-from-rooms-list" ng-repeat="room in landing.roomsList">
+    <td class="room-number">{{$index +1}}</td>
+    <td class="room-name">{{room.name}}</td>
+  </tr>
+</table>
