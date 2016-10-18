@@ -1,8 +1,7 @@
 (function() {
-  function LandingCtrl($uibModal, Rooms, $firebaseArray) {
+  function LandingCtrl(Messages, $uibModal, Rooms, $firebaseArray) {
     this.testData = "The controller is loading";
-
-    this.roomsList = Rooms.list();
+    this.rooms = Rooms;
 
     this.open = function(size) {
       var modalInst = $uibModal.open({
@@ -11,9 +10,10 @@
       });
     }
 
+
   }
 
   angular
     .module('blocChat')
-    .controller('LandingCtrl', ['$uibModal', 'Rooms', '$firebaseArray', LandingCtrl]);
+    .controller('LandingCtrl', ['Messages', '$uibModal', 'Rooms', '$firebaseArray', LandingCtrl]);
 })();

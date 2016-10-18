@@ -1,14 +1,27 @@
-<div class="left-bar">
-  <div class="left-bar-header">
-    <h1>Bloc Chat</h1>
-    <div class="button-row">
-      <button class="btn btn-primary" type="button" ng-click="landing.open('sm')">Create room</button>
+<div>
+  <div class="left-bar col-sm-3">
+    <div class="left-bar-header">
+      <h1>Bloc Chat</h1>
+      <div class="button-row">
+        <button class="btn btn-primary" type="button" ng-click="landing.open('sm')">Create room</button>
+      </div>
+    </div>
+    <table class="rooms-list-view">
+      <tr class="room-from-rooms-list" ng-repeat="room in landing.rooms.list()">
+        <td class="room-number">{{$index +1}}</td>
+        <td class="room-name">
+
+        <a class="room-name-display" ng-click="landing.rooms.selectRoom(room)">{{room.name}}</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="chatroom-content col-sm-9">
+    <div class="chatroom-header">
+      <h4>{{landing.rooms.currentRoom.name}}</h4>
+    </div>
+    <div class="chatroom-messages">
+
     </div>
   </div>
-  <table class="rooms-list-view">
-    <tr class="room-from-rooms-list" ng-repeat="room in landing.roomsList">
-      <td class="room-number">{{$index +1}}</td>
-      <td class="room-name">{{room.name}}</td>
-    </tr>
-  </table>
 </div>
