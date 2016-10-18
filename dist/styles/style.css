@@ -5,3 +5,8 @@ button {
 td {
   min-width: 20px;
 }
+
+.left-bar {
+  background-color: gray;
+  height: 100vh;
+}
