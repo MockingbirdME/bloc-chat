@@ -1,6 +1,6 @@
 (function() {
-  function LandingCtrl(Messages, $uibModal, Rooms, $scope, $firebaseArray) {
-    this.testData = "The controller is loading";
+  function LandingCtrl($cookies, Messages, $uibModal, Rooms, $scope, $firebaseArray) {
+    this.testData = $cookies.get('blocChatCurrentUser');
     this.rooms = Rooms;
     this.messages = Messages;
     this.open = function(size) {
@@ -15,5 +15,5 @@
 
   angular
     .module('blocChat')
-    .controller('LandingCtrl', ['Messages', '$uibModal', 'Rooms', '$scope', '$firebaseArray', LandingCtrl]);
+    .controller('LandingCtrl', ['$cookies', 'Messages', '$uibModal', 'Rooms', '$scope', '$firebaseArray', LandingCtrl]);
 })();
