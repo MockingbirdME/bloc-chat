@@ -6,7 +6,9 @@
       $uibModal.open({
         controller: 'UsernameModalCtrl as username',
         templateUrl: '/templates/usernameModal.html',
-        size: 'sm'
+        size: 'sm',
+        backdrop: 'static',
+        keyboard: false
       })
     }
   }

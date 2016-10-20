@@ -1,6 +1,6 @@
 (function() {
   function LandingCtrl($cookies, Messages, $uibModal, Rooms, $scope, $firebaseArray) {
-    this.testData = $cookies.get('blocChatCurrentUser');
+    this.currentUser = $cookies.get('blocChatCurrentUser');
     this.rooms = Rooms;
     this.messages = Messages;
     this.open = function(size) {
