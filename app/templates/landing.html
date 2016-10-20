@@ -16,8 +16,9 @@
     </table>
   </div>
   <div class="chatroom-content col-sm-9">
-    <div class="chatroom-header">
-      <h4>{{landing.rooms.currentRoom.name}}</h4>
+    <div class="chatroom-header jumbotron">
+      <h3 class="pull-left">{{landing.rooms.currentRoom.name}}</h3>
+      <h5 class="pull-right">Username: {{landing.testData}}</h5>
     </div>
     <table class="messages-list-view">
       <tr class="msg-from-msg-list" ng-repeat="msg in landing.rooms.messages">
