@@ -22,13 +22,13 @@
     </div>
     <table class="messages-list-view">
       <tr class="msg-from-msg-list" ng-repeat="msg in landing.rooms.messages">
-        <td class="msg-user">{{msg.username}}</td>
+        <td class="msg-user"><strong>{{msg.username}} </strong><small>({{msg.sentAt}})</small><strong> - </strong></td>
         <td class="msg-content">{{msg.content}}</td>
     </table>
 
     <div class="message-input">
-      <textarea placeholder="enter message ..." class="form-control" ng-model="newMessage"> </textarea>
-      <button class="btn btn-primary pull-right" type="button" ng-click="landing.messages.addMessage()">Submit</button>
+      <textarea placeholder="enter message ..." class="form-control" id="msg-input-area" ng-model="newMessage"> </textarea>
+      <button class="btn btn-primary pull-right" type="button" ng-click="landing.messages.send(newMessage, landing.rooms.currentRoom.$id)">Submit</button>
     </div>
   </div>
 </div>
