@@ -9,10 +9,10 @@
     }
 
     Rooms.currentRoom = {name: "no room selected", $id: "-KUHzfoJA_yO4WGGqVZf"};
-    Rooms.messages = [{username: "devon", content: "something here"}, {username: "someguy", content: "something else here"}];
+    Rooms.messages = [{username: "devon", content: "Welcome to Bloc Chat, pick a room and start chatting.", sentAt: "on load"}];
 
     Rooms.addRoom = function(roomName) {
-      rooms.$add({name: roomName});
+      Rooms.rooms.$add({name: roomName});
     }
 
     Rooms.selectRoom = function(room) {
